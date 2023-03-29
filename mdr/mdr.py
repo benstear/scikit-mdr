@@ -123,7 +123,7 @@ class MDR(MDRBase, TransformerMixin):
         if self.feature_map is None:
             raise ValueError('The MDR model must be fit before transform can be called.')
 
-        new_feature = np.zeros(features.shape[0], dtype=np.int)
+        new_feature = np.zeros(features.shape[0], dtype=int)
 
         for row_i in range(features.shape[0]):
             feature_instance = tuple(features[row_i])
@@ -177,7 +177,7 @@ class MDRClassifier(MDRBase, ClassifierMixin):
         if self.feature_map is None:
             raise ValueError('The MDR model must be fit before predict can be called.')
 
-        new_feature = np.zeros(features.shape[0], dtype=np.int)
+        new_feature = np.zeros(features.shape[0], dtype=int)
 
         for row_i in range(features.shape[0]):
             feature_instance = tuple(features[row_i])
